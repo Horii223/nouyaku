@@ -2394,7 +2394,7 @@ def veg():
             ["ハスモン天敵"]
             })
     elif veg=="かぼちゃ(露地栽培)":
-        veg_pu=st.selectbox(
+          veg_pu=st.selectbox(
          "病害は",
          ("下から選択してください","うどんこ病")
          )
