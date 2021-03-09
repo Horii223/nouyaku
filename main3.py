@@ -2166,32 +2166,32 @@ def fruit_cirtus():
         })
 
 def fruit_ex():
-    fruit_cirtus=st.selectbox(
+    fruit_ex=st.selectbox(
     "病害は",
     ('下から選択してください','貯蔵病害（軸腐病）','貯蔵病害（青かび病）', '貯蔵病害（緑かび病）',"黒点病")
     )
-    if fruit_cirtus=="貯蔵病害（軸腐病）":
+    if fruit_ex=="貯蔵病害（軸腐病）":
         st.table({
         "散布可能なリストです":
         ["トップジンＭゾル","ホクコートップジンＭゾル"]
         })
-    elif fruit_cirtus_f=="貯蔵病害（青かび病）":
+    elif fruit_ex=="貯蔵病害（青かび病）":
         st.table({
         "散布可能なリストです":
         ["トップジンＭゾル","ホクコートップジンＭゾル"]
         })
-    elif fruit_cirtus_f=="貯蔵病害（緑かび病）":
+    elif fruit_ex=="貯蔵病害（緑かび病）":
         st.table({
         "散布可能なリストです":
         ["トップジンＭゾル","ホクコートップジンＭゾル"]
         })
-    elif fruit_cirtus_f=="黒点病）":
+    elif fruit_ex=="黒点病）":
         st.table({
         "散布可能なリストです":
         ["ジマンダイセン水和剤"]
         })
 def fruit_orange():
-    fruit_cirtus_i=st.selectbox(
+    fruit_orange=st.selectbox(
     "病害は",
     ('下から選択してください',"アザミウマ類","ケシキスイ類","コアオハナムグリ","黒点病","灰色かび病",'貯蔵病害（軸腐病）','貯蔵病害（青かび病）', '貯蔵病害（緑かび病）')
     )
