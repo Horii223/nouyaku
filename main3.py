@@ -2397,12 +2397,12 @@ def veg():
           veg_pu=st.selectbox(
          "病害は",
          ("下から選択してください","うどんこ病")
-         )
-        if veg_pu=="うどんこ病":
-            st.table({
-            "散布可能なリストです":
-            ["サルバトーレＭＥ"]
-           })
+         ) 
+            if veg_pu=="うどんこ病":
+               st.table({
+               "散布可能なリストです":
+               ["サルバトーレＭＥ"]
+              })
     elif veg=="かぼちゃ":
           veg_pua=st.selectbox(
            "病害は",
