@@ -2394,11 +2394,11 @@ def veg():
             ["ハスモン天敵"]
             })
     elif veg=="かぼちゃ(露地栽培)":
-          veg_pu=st.selectbox(
+        veg_pu=st.selectbox(
          "病害は",
          ("下から選択してください","うどんこ病")
-              )  
-           if veg_pu=="うどんこ病":
+          ) 
+        if veg_pu=="うどんこ病":
             st.table({
             "散布可能なリストです":
             ["サルバトーレＭＥ"]
