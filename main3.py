@@ -3,7 +3,50 @@ import streamlit as st
 
 st.title('HIDDEN')
 st.subheader('これは昔から伝わるHIDDENの薬...')
+st.header("農薬希釈計算")
+import streamlit as st 
+dilution1=st.selectbox("農薬の希釈倍率は",
+ options=[8,16,25,50,100,200,400,500,600,700,800,900,1000,1200,1500,2000])
 
+st.subheader("-----------------")
+st.subheader("液量から液量を計算")
+dilution2=st.slider("農薬の散布液量は",min_value=0,max_value=100,step=10)
+result1 = int(dilution2)/int(dilution1)*1000
+if result1>=1000:
+    result1=int(result1)/1000
+    result2=st.subheader("使用薬量:"+str(result1)+"L") 
+    result3=st.subheader("散布液量:"+str(dilution2)+"L")
+else:
+    result2=st.subheader("使用薬量:"+str(result1)+"ml")
+    result3=st.subheader("散布液量:"+str(dilution2)+"L")
+st.subheader("-----------------")
+st.subheader("-----------------")
+st.subheader("面積から液量を計算")
+number=st.number_input("面積(ha)",min_value=1,max_value=100,step=1)
+field_a=st.slider("10a当たりの散布量",min_value=0,max_value=100,step=5)
+st.write(field_a)
+result5=number/int(dilution1)*10000*int(field_a)
+result6=int(field_a)*10*int(number)
+if result5>=1000:
+    result5=int(result5)/1000
+    st.subheader("使用薬量:"+str(result5)+"L")
+    st.subheader("散布液量:"+str(result6)+"L")
+else:
+   st.subheader("使用薬量:"+str(result5)+"mL")
+   st.subheader("散布液量:"+str(result6)+"L")
+st.subheader("----------------")
+st.subheader("-----------------")
+st.subheader("使用薬量から計算")
+result7=st.number_input("使用薬量(mg)",min_value=0,max_value=1000,step=1)
+result8=int(result7)*int(dilution1)/1000
+if result7>=1000:
+    result7=int(result7)/1000
+    st.subheader("使用薬量:"+str(result7)+"L")
+    st.subheader("散布液量:"+str(result8)+"L")
+else:
+    st.subheader("使用液量:"+str(result7)+"ml")
+    st.subheader("散布液量:"+str(result8)+"L")
+st.header("散布可能な農薬リスト")
 crop_class =st.selectbox(
 "今回の作物分類は",
     ("下から選択してください",'稲','麦類','はとむぎ','豆類','とうもろこし','てんさい','芋類','果樹類',
